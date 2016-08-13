@@ -1,14 +1,14 @@
-#Matrix inversion is usually a costly computation and 
-#there may be some benefit to caching the inverse of
-#a matrix rather than compute it repeatedly.
-# The assignment is to write a pair of functions 
-#that cache the inverse of a matrix.
+##Matrix inversion is usually a costly computation and 
+##there may be some benefit to caching the inverse of
+##a matrix rather than compute it repeatedly.
+##The assignment is to write a pair of functions 
+##that cache the inverse of a matrix.
 
 
-#The first function, makeVector creates a special "vector", 
-#which is really a list containing a function to:
-#Set and get the value of the vector, and the second function
-#set and get the value of the mean.
+##The first function, makeVector creates a special "vector", 
+##which is really a list containing a function to:
+##Set and get the value of the vector, and the second function
+##set and get the value of the mean.
 makeVector <- function(x = numeric()) {
   m <- NULL
   set <- function(y) {
@@ -35,7 +35,7 @@ cachemean <- function(x, ...) {
   m
 }
 
-#This function creates a special "matrix" object that can cache its inverse.
+##This function creates a special "matrix" object that can cache its inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
@@ -52,7 +52,7 @@ makeCacheMatrix <- function(x = matrix()) {
        getInverse = getInverse)
 }
 
-#This function computes the inverse of the special "matrix" returned by makeCacheMatrix above.
+##This function computes the inverse of the special "matrix" returned by makeCacheMatrix above.
 
 cacheSolve <- function(x, ...) {
     inv <- x$getInverse()
